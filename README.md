@@ -18,6 +18,6 @@ This `DisplayComponent` should have two variants, one that displays data horizon
 
 How you display the data is entirely up to you.
 
-Please follow React best practices, use hooks where it makes sense, comment liberally, etc.
+Please follow React best practices, use hooks where it makes sense, handle errors gracefully, comment liberally, etc.
 
 Commits are free so commit early and often!
