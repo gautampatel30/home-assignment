@@ -13,15 +13,32 @@
 ## Assignment Instructions
 
 ### Frontend 
+
+Your goal is to build a fully interactive, reusable, and modular component that displays data fetched from a server with added functionalities.
+
+1. Data Fetching & Error Handling
+- Fetch data from the backend API and handle loading, error states, and retries.
+
+2. Multiple Display Modes 
+- Implement two variants: horizontal and vertical display modes.
+- Add a toggle button to switch between the display modes dynamically.
+
+3. Sorting & Filtering 
+- Allow sorting by at least one column (e.g., alphabetically or numerically).
+- Provide a basic filtering feature that lets users search within the displayed data.
+
+4. Pagination 
+- If the fetched dataset is large, paginate results with a “Next” and “Previous” button.
+- Allow setting page size (e.g., 5, 10, 20 items per page).
+
+5. Testing
+- Write unit tests for at least one React hook and one core function in the component using Jest and React Testing Library.
+
 Your goal is to write a reusable, modular component that displays some data that is fetched from a server.
 
-This `DisplayComponent` should have two variants, one that displays data horizontally, one that displays data vertically.
+This `DisplayComponent` should have two variants, one that displays data horizontally, one that displays data vertically. How you display the data is entirely up to you.
 
-How you display the data is entirely up to you.
-
-Please follow React best practices, use hooks where it makes sense, handle errors gracefully, comment liberally, etc.
-
-Commits are free so commit early and often!
+Please follow React best practices, use hooks where it makes sense, handle errors gracefully, comment liberally, etc. Commits are free so commit early and often!
 
 
 ### DevOps/CI-CD 
