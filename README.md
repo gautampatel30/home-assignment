@@ -37,7 +37,7 @@ Make sure to read all instructions and complete the assignment before submitting
 2. CD to `client` directory and run `npm install`
 3. Run `npm run dev` to start the development server.
 4. CD to the `server` directory and run `npm install`
-5. Run `npm run dev` to start the server.
+5. Run `npm run dev` to start the server. It listens on port 9800 by default.
 6. Open the browser and navigate to `http://localhost:5173` to see the Client.
 7. Complete the assignment.
 
