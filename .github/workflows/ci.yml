@@ -1,0 +1,76 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          
+      - name: Install Dependencies (Frontend)
+        run: |
+          cd client
+          npm install
+          
+      - name: Install Dependencies (Backend)
+        run: |
+          cd server
+          npm install
+
+      - name: Run Linting (Frontend)
+        run: |
+          cd client
+          npm run lint
+
+      - name: Run Linting (Backend)
+        run: |
+          cd server
+          npm run lint
+
+      - name: Run Unit Tests (Frontend)
+        run: |
+          cd client
+          npm test -- --watchAll=false
+
+      - name: Run Unit Tests (Backend)
+        run: |
+          cd server
+          npm test -- --watchAll=false
+
+      - name: Build Frontend
+        run: |
+          cd client
+          npm run build
+
+      - name: Build Backend
+        run: |
+          cd server
+          npm run build
+
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
