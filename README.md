@@ -29,10 +29,6 @@ This project is designed as a simple coding assignment that consists of both a f
 
 Make sure to read all instructions and complete the assignment before submitting the repository.
 
-<<<<<<< HEAD
-=======
----
-=======
 1. Fork the repository and clone it to your local machine.
 2. CD to `client` directory and run `npm install`
 3. Run `npm run dev` to start the development server.
@@ -52,5 +48,4 @@ How you display the data is entirely up to you.
 Please follow React best practices, use hooks where it makes sense, handle errors gracefully, comment liberally, etc.
 
 Commits are free so commit early and often!
->>>>>>> bcbb6ed (add dummy data, update readme)
->>>>>>> b431b13 (add dummy data, update readme)
+
